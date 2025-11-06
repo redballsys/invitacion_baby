@@ -181,7 +181,7 @@ export default function InvitacionBabyShower() {
                                     </div>
                                     <div className="h-10 w-[1px] bg-[--rose]/40"></div>
                                     <div className="text-center">
-                                        <p className="text-xs text-neutral-600 tracking-wide">02:00 HS</p>
+                                        <p className="text-xs text-neutral-600 tracking-wide">02:00 Hrs</p>
                                         <p className="text-xs text-neutral-600 tracking-wide">PM</p>
                                     </div>
                                 </div>
@@ -228,3 +228,4 @@ export default function InvitacionBabyShower() {
         </div>
     );
 }
+
