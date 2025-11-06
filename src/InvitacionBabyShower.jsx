@@ -81,7 +81,7 @@ export default function InvitacionBabyShower() {
                             </motion.h1>
 
                             <motion.img
-                                src="/mnt/data/2692d1a4ffe9b4531089ac72846c7919.jpg"
+                                src="/images/osito.png"
                                 alt="Osito con globos"
                                 className="mx-auto mt-3 w-40 h-auto select-none pointer-events-none drop-shadow"
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -107,7 +107,7 @@ export default function InvitacionBabyShower() {
                             </motion.div>
 
                             <motion.img
-                                src="/mnt/data/33bef1b8-167b-4759-a454-3dcc5d43fe1a.png"
+                                src="/images/globos-nubes.png"
                                 alt="Decoración de globos y nubes"
                                 className="mx-auto mt-3 w-44 h-auto select-none pointer-events-none drop-shadow"
                                 initial={{ opacity: 0, scale: 0.9 }}
