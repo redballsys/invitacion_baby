@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "./components/ui/card";
 import { MapPin, Calendar, Clock, Gift, Heart, Music2, VolumeX } from "lucide-react";
 
 const PALETTE = {
@@ -24,7 +24,6 @@ export default function InvitacionBabyShower() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Try to start audio after first user interaction (mobile autoplay policy)
   useEffect(() => {
     const enableSound = () => {
       if (!audioRef.current) return;
@@ -57,18 +56,16 @@ export default function InvitacionBabyShower() {
     <div
       className="min-h-screen w-full bg-gradient-to-b from-white via-[--petal] to-[--linen] flex items-stretch justify-center"
       style={{
-        ["--blush" as any]: PALETTE.blush,
-        ["--rose" as any]: PALETTE.rose,
-        ["--linen" as any]: PALETTE.linen,
-        ["--petal" as any]: PALETTE.petal,
-        ["--mist" as any]: PALETTE.mist,
+        '--blush': PALETTE.blush,
+        '--rose': PALETTE.rose,
+        '--linen': PALETTE.linen,
+        '--petal': PALETTE.petal,
+        '--mist': PALETTE.mist,
       }}
     >
       <div className="w-full max-w-sm px-4 py-6 relative overflow-hidden">
-        {/* Background music (place your file at public/audio/bgm.mp3) */}
         <audio ref={audioRef} src="/audio/bgm.mp3" loop preload="auto" />
 
-        {/* Floating mute/unmute button */}
         <button
           onClick={toggleAudio}
           aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
@@ -76,22 +73,6 @@ export default function InvitacionBabyShower() {
         >
           {isPlaying ? <Music2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
         </button>
-        {bubbles.map((b) => (
-          <motion.span
-            key={b.id}
-            initial={{ y: 400 }}
-            animate={{ y: -150 }}
-            transition={{ duration: b.duration, delay: b.delay, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
-            className="absolute rounded-full blur-md"
-            style={{
-              left: `${b.x}%`,
-              width: b.size,
-              height: b.size,
-              background: `radial-gradient(circle at 30% 30%, ${PALETTE.linen}, ${PALETTE.mist})`,
-              opacity: b.opacity,
-            }}
-          />
-        ))}
 
         <Card className="relative border-0 shadow-xl rounded-2xl overflow-hidden bg-white/80 backdrop-blur">
           <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -125,7 +106,7 @@ export default function InvitacionBabyShower() {
               </motion.h1>
 
               <motion.img
-                src="/mnt/data/2692d1a4ffe9b4531089ac72846c7919.jpg"
+                src="/images/osito.png"
                 alt="Osito con globos"
                 className="mx-auto mt-3 w-40 h-auto select-none pointer-events-none drop-shadow"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -151,7 +132,7 @@ export default function InvitacionBabyShower() {
               </motion.div>
 
               <motion.img
-                src="/mnt/data/33bef1b8-167b-4759-a454-3dcc5d43fe1a.png"
+                src="/images/globos-nubes.png"
                 alt="Decoración de globos y nubes"
                 className="mx-auto mt-3 w-44 h-auto select-none pointer-events-none drop-shadow"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -185,7 +166,6 @@ export default function InvitacionBabyShower() {
                 </p>
               </motion.div>
 
-              {/* Bloque de fecha/hora/lugar */}
               <motion.div
                 className="mt-6 text-neutral-600 text-sm leading-relaxed px-4"
                 initial={{ opacity: 0, y: 10 }}
@@ -217,22 +197,22 @@ export default function InvitacionBabyShower() {
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mt-8">
-                <p className="text-[11px] text-center text-neutral-500 mt-3">Sugerencia de regalo:</p>
+                <p className="text-[11px] text-center text-black mt-3">Sugerencia de regalo:</p>
                 <a
                   href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51749453"
                   target="_blank"
                   rel="noreferrer"
-                  className="block text-center text-sm font-medium text-[--rose] underline mt-1"
+                  className="block text-center text-sm font-medium text-black underline mt-1"
                 >
                   N° de evento Liverpool 51749453
                 </a>
-                <p className="mt-4 text-sm text-[--rose] italic">¡No faltes! ¡Te esperamos con mucho cariño!</p>
+                <p className="mt-4 text-sm text-black italic">¡No faltes! ¡Te esperamos con mucho cariño!</p>
               </motion.div>
             </motion.div>
           </CardContent>
         </Card>
 
-        <div className="text-center text-[10px] text-neutral-400 mt-4">Hecho con 💖 para ver en móvil</div>
+        <div className="text-center text-[10px] text-neutral-400 mt-4">Hecho por <strong>RedballSystems</strong> para ver en móvil</div>
       </div>
     </div>
   );
