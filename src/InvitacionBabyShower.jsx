@@ -209,6 +209,7 @@ export default function InvitacionBabyShower() {
                 <p className="mt-4 text-sm text-black italic">¡No faltes! ¡Te esperamos con mucho cariño!</p>
               </motion.div>
             </motion.div>
+            <br></br>
           </CardContent>
         </Card>
 
