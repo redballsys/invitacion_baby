@@ -212,8 +212,6 @@ export default function InvitacionBabyShower() {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
           </CardContent>
         </Card>
 
