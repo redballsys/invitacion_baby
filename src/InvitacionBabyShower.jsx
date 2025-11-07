@@ -175,7 +175,7 @@ export default function InvitacionBabyShower() {
                                 <p className="text-base font-medium text-neutral-700 mb-3">Te esperamos el día:</p>
                                 <div className="flex items-center justify-center gap-8">
                                     <div className="text-center">
-                                        <p className="text-xs text-neutral-600 tracking-wide">VIERNES</p>
+                                        <p className="text-xs text-neutral-600 tracking-wide">SABADO</p>
                                         <p className="text-4xl font-bold text-[--rose] leading-none">06</p>
                                         <p className="text-xs text-neutral-600 tracking-wide">DIC.</p>
                                     </div>
@@ -228,4 +228,5 @@ export default function InvitacionBabyShower() {
         </div>
     );
 }
+
 
